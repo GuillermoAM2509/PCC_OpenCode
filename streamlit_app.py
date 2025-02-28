@@ -34,7 +34,7 @@ def calcular_consumo():
         if consumo_total < 2:
             mensaje = "Ets el final boss de l'estalvi energètic! Consumeixes menys energia que un hobbit perdut al bosc (tant de bo ser tu)."
         elif 2 <= consumo_total < 5:
-            mensaje = "Consum mid, promig, no t'amagues i això està bé. Saps el que si que estaria millor? "
+            mensaje = "Consum mid, promig, no t'amagues i això està bé. Però sempre es pot millorar! "
         else:
             mensaje = "Definitivament ens hem tornat bojos, relaxem-nos i recordem que la factura NO es pagarà sola."
         
