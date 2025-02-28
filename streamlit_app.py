@@ -10,10 +10,10 @@ def calcular_consumo():
     tv_horas = st.slider("Hores veient la televisió (Netflix, Prime i HBO conten, no t'amaguis):", 0, 12, 0)
     cafetera = st.slider("Hores d'ús de xarxes socials:", 0, 10, 0)
     cargador_horas = st.slider("Horas carregant el telèfon mòbil:", 0, 10, 0)
-    nevera_var = st.checkbox("Freqüento la nevera / Tinc una a l'habitació (si home)")
-    ventilador_var = st.checkbox("Uso ventilador/aire para dormir 🌬️")
+    nevera_var = st.checkbox("Freqüento la nevera / Tinc una a l'habitació (si homee...)")
+    ventilador_var = st.checkbox("Utilitzo ventilador/calefactor per dormir. ")
     
-    if st.button("Calcular Consum"):
+    if st.button("Calcular Consum Beep Boop Beep"):
         consumo_total = (
             pc_horas * 0.2 +
             luces_horas * 0.06 +
@@ -36,14 +36,14 @@ def calcular_consumo():
         elif 2 <= consumo_total < 5:
             mensaje = "Consum mid, promig, no t'amagues i això està bé. Saps el que si que estaria millor? "
         else:
-            mensaje = "¡Gastas más energía que una nave espacial en despegue! Reduce un poco, que la factura no se paga sola."
+            mensaje = "Definitivament ens hem tornat bojos, relaxem-nos i recordem que la factura NO es pagarà sola."
         
         st.write(mensaje)
-        st.subheader(f" Comparado con el consumo diario de la escuela ({round(consumo_escuela_diario, 2)} kWh), tu gasto representa el {round(porcentaje, 5)}%.")
+        st.subheader(f" Comparat amb el consum diari de l'escola ({round(consumo_escuela_diario, 2)} kWh),  el teu consum representa el {round(porcentaje, 5)}%.")
         if porcentaje > 0.05:
-            extra_mensaje = "¡No está mal, pero intenta reducirlo un poco más! Cada kilovatio cuenta. "
+            extra_mensaje = "¡No està gens malament, però mai està de més intentar reduir-lo! Cada quilovat conta 💪. "
         else:
-            extra_mensaje = "Eres más eficiente que un panel solar en un día soleado.  ¡Sigue así!"
+            extra_mensaje = "Ets top efficiència, segueix així, que si jo fos tu estaria orgullós a muerte"
         st.write(extra_mensaje)
 
 if __name__ == "__main__":
