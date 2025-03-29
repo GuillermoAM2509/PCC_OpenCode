@@ -6,7 +6,7 @@ def calcular_consumo():
     
     pc_horas = st.slider("Hores d'ús ordenador:", 0, 12, 0)
     luces_horas = st.slider("Hores amb els llums encesos:", 0, 12, 0)
-    consola_horas = st.slider("Hores jugant a videojocs: ", 0, 12, 0)
+    videoj_horas = st.slider("Hores jugant a videojocs: ", 0, 12, 0)
     tv_horas = st.slider("Hores veient la televisió (Netflix, Prime i HBO conten, no t'amaguis):", 0, 12, 0)
     cafetera = st.slider("Hores d'ús de xarxes socials:", 0, 10, 0)
     cargador_horas = st.slider("Horas carregant el telèfon mòbil:", 0, 10, 0)
@@ -17,7 +17,7 @@ def calcular_consumo():
         consumo_total = (
             pc_horas * 0.2 +
             luces_horas * 0.06 +
-            consola_horas * 0.15 +
+            videoj_horas * 0.15 +
             tv_horas * 0.1 +
             cafetera * 0.1 +
             cargador_horas * 0.005
@@ -27,8 +27,8 @@ def calcular_consumo():
         if ventilador_var:
             consumo_total += 0.8
 
-        consumo_escuela_diario = 374806.1 / 365
-        porcentaje = (consumo_total / consumo_escuela_diario) * 100
+        escuela_diario = 374806.1 / 365
+        porcentaje = (consumo_total / escuela_diario) * 100
 
         st.subheader(f" El teu consum diari aproximat es de -beep-boop-beep- {round(consumo_total, 2)} kWh!! ")
         if consumo_total < 2:
