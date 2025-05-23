@@ -39,7 +39,7 @@ def calcular_consumo():
             mensaje = "Definitivament ens hem tornat bojos, relaxem-nos i recordem que la factura NO es pagarà sola."
         
         st.write(mensaje)
-        st.subheader(f" Comparat amb el consum diari de l'escola ({round(consumo_escuela_diario, 2)} kWh),  el teu consum representa el {round(porcentaje, 5)}%.")
+        st.subheader(f" Comparat amb el consum diari de l'escola ({round(escuela_diario, 2)} kWh),  el teu consum representa el {round(porcentaje, 5)}%.")
         if porcentaje > 0.05:
             extra_mensaje = "¡No està gens malament, però mai està de més intentar reduir-lo! Cada quilovat conta 💪. "
         else:
