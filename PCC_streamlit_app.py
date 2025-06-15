@@ -7,10 +7,10 @@ def calcular_consumo():
     pc_horas = st.slider("Hores d'ús ordenador:", 0, 12, 0)
     luces_horas = st.slider("Hores amb els llums encesos:", 0, 12, 0)
     videoj_horas = st.slider("Hores jugant a videojocs:", 0, 12, 0)
-    tv_horas = st.slider("Hores veient la televisió (Netflix, Prime i HBO conten, no t'amaguis):", 0, 12, 0)
+    tv_horas = st.slider("Hores veient la televisió (Netflix, Prime i HBO compten, no te n'amaguis):", 0, 12, 0)
     cafetera = st.slider("Hores d'ús de xarxes socials:", 0, 10, 0)
     cargador_horas = st.slider("Hores carregant el telèfon mòbil:", 0, 10, 0)
-    nevera_var = st.checkbox("Freqüento la nevera / Tinc una a l'habitació (si homee...)")
+    nevera_var = st.checkbox("Freqüento la nevera / En tinc una a l'habitació (ja t'agradaria...)")
     ventilador_var = st.checkbox("Utilitzo ventilador/calefactor per dormir.")
 
     if st.button("Calcular Consum Beep Boop Beep"):
@@ -35,16 +35,16 @@ def calcular_consumo():
         if consumo_total < 2:
             mensaje = "Ets el final boss de l'estalvi energètic! Consumeixes menys energia que un hobbit perdut al bosc (tant de bo ser tu)."
         elif 2 <= consumo_total < 5:
-            mensaje = "Consum mid, promig, no t'amagues i això està bé. Però sempre es pot millorar!"
+            mensaje = "Consum normal, promig, no t'amagues i això ja està bé. Però recorda, sempre es pot millorar!"
         else:
-            mensaje = "Definitivament ens hem tornat bojos, relaxem-nos i recordem que la factura NO es pagarà sola."
+            mensaje = "Definitivament ens hem tornat bojos, potser caldria fer una mica de mindfullness i recordar que la factura no es pagarà sola."
         
         st.write(mensaje)
         
         st.subheader(f"Comparat amb el consum diari de l'escola ({round(escuela_diario, 2)} kWh), el teu consum representa el {round(porcentaje, 5)}%.")
         
         if porcentaje > 0.05:
-            st.write("No està gens malament, però mai està de més intentar reduir-lo! Cada quilovat conta 💪.")
+            st.write("No està gens malament, però mai està de més intentar reduir-lo! Cada quilovat-hora compta 💪.")
         else:
             st.write("Ets top eficiència, segueix així, que si jo fos tu estaria orgullós a muerte.")
 
